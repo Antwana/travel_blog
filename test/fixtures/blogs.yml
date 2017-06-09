@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  country: MyString
+  city: MyString
+  place: MyString
+  article: MyString
+  date_traveled: 2017-06-09 10:59:03
+  date_created: 2017-06-09 10:59:03
+
+two:
+  title: MyString
+  country: MyString
+  city: MyString
+  place: MyString
+  article: MyString
+  date_traveled: 2017-06-09 10:59:03
+  date_created: 2017-06-09 10:59:03
