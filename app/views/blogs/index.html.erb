@@ -3,10 +3,11 @@
 
 <ul>
   <% @blogs.each do |blog| %>
-    <li>
-      <a href="/blogs/<%= blog.id %>">
-        <%= blog.user_name %>
-      </a>
-    </li>
+    <li><a href="/blogs/<%= blog.id %>">
+        <%= blog.user_name %></a></li>
+    <li><%= blog.title %></li>
+    <li><%= blog.date_traveled %></li>
+    <li><%= blog.article %></li>
+
   <% end %>
 </ul>

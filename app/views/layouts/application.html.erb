@@ -6,17 +6,20 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Clicker+Script|Lobster|Lustria|Pacifico|Quicksand" rel="stylesheet">
   </head>
 
   <body>
-    <h1>Travel Log Blog</h1>
+    <div>
+      <h1 class="layout">Travel Logs</h1>
+    </div>
+    <div>
+      <ul class="navigation">
+        <li><%= link_to "Home", blogs_path%></li>
+        <li><%= link_to "Create New Blog", new_blog_path %></li>
 
-    <ul>
-      <li><%= link_to "Create New Blog", new_blog_path %></li>
-      
-      <li></li>
-      <li></li>
-    </ul>
+      </ul>
+    </div>
     <%= yield %>
   </body>
 </html>

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'index' => 'blogs#index'
   post 'create' => 'blogs#create'
   get 'new' => 'blogs#new'
+  get 'blogs/:id' => 'blogs#show'
 end
   #devise_for :users
   #root to: "blog#index"

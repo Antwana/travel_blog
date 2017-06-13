@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+ .layout{
+   text-align: center;
+   font-family: 'Pacifico', cursive;
+   font-size: 80px;
+ }
