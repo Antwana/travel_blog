@@ -21,17 +21,16 @@ ActiveRecord::Schema.define(version: 20170609150506) do
     t.string "country"
     t.string "city"
     t.string "place"
-    t.string "article"
+    t.text "article"
     t.string "photo_url"
     t.string "date_traveled"
-    t.datetime "date_created"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "comments", force: :cascade do |t|
     t.string "user_name"
-    t.datetime "date_created"
+    t.text "user_comments"
     t.bigint "blog_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -6,10 +6,9 @@ class CreateBlogs < ActiveRecord::Migration[5.1]
       t.string :country
       t.string :city
       t.string :place
-      t.string :article
+      t.text :article
       t.string :photo_url
       t.string :date_traveled
-      t.datetime :date_created
 
       t.timestamps
     end
