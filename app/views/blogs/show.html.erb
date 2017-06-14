@@ -1,10 +1,15 @@
-<h1>Blog#show</h1>
-<p>Find me in app/views/blog/show.html.erb</p>
+<h1><%=@blog.user_name%></h1>
 
 <ul>
-
-    <li class='name'> <%= @blog.user_name %></li>
-    <li> <%= @blog.article %></li>
-    <li> <%= @blog.date_traveled %></li>
+    <li> <%= @blog.user_name %></li>
+    <li class="date"> <%= @blog.date_traveled %></li>
+    <li class="article"> <%= @blog.article %></li>
     <li><img class='blog-photo' src="<%= @blog.photo_url %>"></li>
 </ul>
+
+<div>
+  <ul>
+    <li> <%= @comment.user_name %></li>
+    <li> <%= @comment.user_comments %></li>
+  </ul>
+</div>

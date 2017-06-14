@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/blogs/countries' => 'blogs#countries'
   resources :blogs do
     resources :comments, except: [:index]
   end
@@ -6,6 +7,8 @@ Rails.application.routes.draw do
   post 'create' => 'blogs#create'
   get 'new' => 'blogs#new'
   get 'blogs/:id' => 'blogs#show'
+  get 'comments/new' => 'comments#new'
+  get 'edit' => 'blogs#edit'
 end
   #devise_for :users
   #root to: "blog#index"

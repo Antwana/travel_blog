@@ -14,9 +14,9 @@ blogs = Blog.create([{user_name: 'Jai', title: 'My time in Chile', country: 'Chi
   {user_name: 'Marshall', title: "A visit to Kunstmuseum", country: 'Norway', city: 'Trondheim', place: 'Trondheim Kunstmuseum', article: 'The Trondheim Kunstmuseum in Norway. I visited this museum while on a tour in Norway with several friends. We were impressed with the selection of international ans regional art.', photo_url: 'app/assets/images/IMG_1080-1.JPG', date_traveled: 'March 2016',}])
 
 comments = Comment.create([{
-  user_name: 'Marshall', user_comments: 'Great Article!!!', blog_id: blogs[0]},
-  {user_name: 'Kim', user_comments: 'Love this! I plant to visit soon', blog_id: blogs[0]},
-  {user_name: 'Ada', user_comments: 'This is Great!', blog_id: blogs[1]}])
+  name: 'Marshall', user_comments: 'Great Article!!!', blog_id: blogs[0]},
+  {name: 'Kim', user_comments: 'Love this! I plant to visit soon', blog_id: blogs[0]},
+  {name: 'Ada', user_comments: 'This is Great!', blog_id: blogs[1]}])
 
 p "Created #{Blog.count} entries"
 p "Created #{Comment.count} entries"

@@ -13,11 +13,11 @@
     <div>
       <h1 class="layout">Travel Logs</h1>
     </div>
-    <div>
+    <div class="nav">
       <ul class="navigation">
         <li><%= link_to "Home", blogs_path%></li>
+        <li><%= link_to "Destinations", blogs_countries_path%>
         <li><%= link_to "Create New Blog", new_blog_path %></li>
-
       </ul>
     </div>
     <%= yield %>
