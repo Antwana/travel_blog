@@ -9,7 +9,12 @@
 
 <div>
   <ul>
-    <li> <%= @comment.user_name %></li>
-    <li> <%= @comment.user_comments %></li>
+    <% @blog.comments.each do |comments| %>
+    <li> <%= @blog.comments.name %></li>
+    <li> <%= @blog.comments.user_comments %></li>
+    <% end %>
   </ul>
+  <p>
+    <%= link_to "Click here to comment", comments_new_path%>
+  </p>
 </div>

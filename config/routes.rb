@@ -1,14 +1,29 @@
 Rails.application.routes.draw do
   get '/blogs/countries' => 'blogs#countries'
   resources :blogs do
-    resources :comments, except: [:index]
+    resources :comments, except: [:index, :show]
   end
+
+  post ':blog_id/comments' => 'comments#create'
+  get 'comments/new' => 'comments#new'
+  get '/blogs/:blog_id/comments/' => 'comments#show'
   get 'index' => 'blogs#index'
   post 'create' => 'blogs#create'
   get 'new' => 'blogs#new'
-  get 'blogs/:id' => 'blogs#show'
-  get 'comments/new' => 'comments#new'
   get 'edit' => 'blogs#edit'
+  get '/blogs/:id' => 'blogs#show'
+
+
+  # get 'index' => 'blogs#index'
+  # post 'create' => 'blogs#create'
+  # get 'new' => 'blogs#new'
+  # get '/blogs/:id' => 'blogs#show'
+  # post ':blog_id/comments' => 'comments#create'
+  # get 'comments/new' => 'comments#new'
+  # get 'edit' => 'blogs#edit'
+  # get '/blogs/:blog_id/comments/:id' => 'comments#show'
+
+
 end
   #devise_for :users
   #root to: "blog#index"

@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20170609150506) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.string "user_name"
+    t.string "name"
     t.text "user_comments"
     t.bigint "blog_id"
     t.datetime "created_at", null: false
