@@ -1,41 +1,14 @@
 <h1>Blog#edit</h1>
 
-
-
-<form action="/blogs/<%= @blog.id %>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="_method" value="put">
-
-  <label for="blog[user_name]">Name:</label>
-  <input name="blog[user_name]" value="<%= @blog.user_name %>">
-
-  <label for="blog[title]">Title:</label>
-  <input name="blog[title]" value="<%= @blog.title %>">
-
-  <label for="blog[country]">Country:</label>
-  <input name="blog[country]" value="<%= @blog.country %>">
-
-  <label for="blog[city]">City:</label>
-  <input name="blog[city]" value="<%= @blog.city %>">
-
-  <label for="blog[place]">Place:</label>
-  <input name="blog[place]" value="<%= @blog.place %>">
-
-  <label for="blog[article]">Article:</label>
-  <input name="blog[article]" value="<%= @blog.article %>">
-
-  <label for="blog[date_traveled]">Date Traveled:</label>
-  <input name="blog[date_travefled]" value="<%= @blog.date_traveled %>">
-
-  <label for="blog[photo_url]">Photo_url:</label>
-  <input name="blog[photo_url]" value="<%= @blog.photo_url %>">
-
-
-  <input type="submit" value="Create">
-</form>
-
-<form action="/artists/<%= @artist.id %>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="_method" value="delete">
-  <input class="button-delete" type="submit" value="Delete!">
-</form>
+<%= form_for :blog do |f| %>
+  Name: <%= f.text_field :user_name %><br />
+  Title : <%= f.text_field :title %><br />
+  Country : <%= f.text_field :country %><br />
+  City : <%= f.text_field :city %><br />
+  Place : <%= f.text_field :place %><br />
+  Article : <%= f.text_area :article %><br />
+  Photo_url : <%= f.text_field :photo_url %><br />
+  Date Traveled : <%= f.text_field :date_traveled %><br />
+  Admin?    : <%= f.check_box :admin %><br />
+  <%= f.submit %>
+<% end %>
