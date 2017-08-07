@@ -31,6 +31,7 @@ end
     redirect_to "/blogs/#{@blog.id}"
 
   end
+  
 
   def countries
     @blogs = Blog.all

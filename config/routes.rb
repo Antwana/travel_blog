@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'new' => 'blogs#new'
   get 'edit' => 'blogs#edit'
   get '/blogs/:id' => 'blogs#show'
-  root :to => 'index#index'
+  root :to => 'blogs#index'
 
 
   # get 'index' => 'blogs#index'
